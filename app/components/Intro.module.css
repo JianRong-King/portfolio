@@ -1,0 +1,65 @@
+.section {
+  height: calc(100dvh - var(--nav-h));
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  scroll-margin-top: var(--nav-h);
+}
+
+.content {
+  max-width: 720px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+
+.greeting {
+  display: block;
+  font-weight: 400;
+  color: var(--text-muted);
+}
+
+.name {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--ink-strong);
+  margin-bottom: 9px;
+}
+
+.tags {
+  font-size: 18px;
+  color: var(--text-muted);
+  margin-bottom: 22px;
+}
+
+.bio {
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+.highlight {
+  color: var(--accent-hover);
+  background: color-mix(in srgb, var(--accent) 15%, transparent);
+  border-radius: 4px;
+  padding: 1px 2px;
+}
+
+@media (max-width: 640px) {
+  .content {
+    padding: 24px 20px;
+  }
+
+  .name {
+    font-size: 31px;
+  }
+
+  .tags,
+  .bio {
+    font-size: 16px;
+  }
+}

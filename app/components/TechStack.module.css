@@ -1,0 +1,139 @@
+.section {
+  scroll-snap-align: start;
+  scroll-margin-top: var(--nav-h);
+  padding: 60px 0;
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 48px;
+  text-align: center;
+}
+
+.heading {
+  font-size: 40px;
+  font-weight: 800;
+  color: var(--ink-strong);
+  margin-bottom: 40px;
+}
+
+.accent {
+  color: var(--accent);
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.tile {
+  width: 140px;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  font-size: 60px;
+}
+
+.label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.strip {
+  margin-top: 48px;
+  background: var(--pill);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 24px 0;
+}
+
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    transparent,
+    #000 8%,
+    #000 92%,
+    transparent
+  );
+  mask-image: linear-gradient(
+    90deg,
+    transparent,
+    #000 8%,
+    #000 92%,
+    transparent
+  );
+}
+
+.track {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  gap: 72px;
+  animation: scroll 17s linear infinite;
+}
+
+.stripItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .track {
+    animation: none;
+  }
+}
+
+.stripItem svg {
+  font-size: 18px;
+}
+
+@media (max-width: 640px) {
+  .heading {
+    font-size: 28px;
+  }
+
+  .tile {
+    width: 96px;
+    height: 96px;
+    font-size: 40px;
+  }
+
+  .inner {
+    padding: 0 20px;
+  }
+
+  .track {
+    gap: 24px;
+  }
+}

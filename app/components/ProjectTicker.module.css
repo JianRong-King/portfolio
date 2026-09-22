@@ -1,0 +1,39 @@
+.ticker {
+  width: 35%;
+  margin: 0 auto;
+  background: transparent;
+  border-radius: 16px;
+  padding: 12px 0 14px;
+}
+
+.caption {
+  text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 22px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 72px;
+}
+
+.logo {
+  height: 30px;
+  width: auto;
+  max-width: 130px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+@media (max-width: 640px) {
+  .row {
+    gap: 32px;
+  }
+}
