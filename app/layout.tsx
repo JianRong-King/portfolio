@@ -20,7 +20,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio — Taste",
+  title: "King Jian Rong",
   description: "Style exploration for the new portfolio design.",
 };
 
