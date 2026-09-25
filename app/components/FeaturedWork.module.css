@@ -77,11 +77,42 @@
   margin-bottom: 12px;
 }
 
+.subtitle {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--text-muted);
+  margin-left: 8px;
+}
+
 .description {
   font-size: 16px;
   line-height: 1.6;
   color: var(--text-muted);
   margin-bottom: 16px;
+  white-space: pre-line;
+  text-align: justify;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 16px;
+  pointer-events: none;
+  user-select: none;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 12px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1;
+  color: var(--text);
+  background: #e2e2e2;
+  border-radius: 999px;
+  cursor: default;
 }
 
 .meta {
@@ -90,21 +121,18 @@
   gap: 12px;
 }
 
-.team {
-  font-size: 14px;
-  font-weight: 500;
-  color: var(--accent);
-}
-
 .tag {
   font-size: 13px;
   color: var(--text);
-  background: var(--pill);
+  background: #e2e2e2;
   padding: 4px 14px;
   border-radius: 999px;
 }
 
 .cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   flex-shrink: 0;
   background: var(--ink-strong);
   color: var(--bg);
@@ -114,6 +142,10 @@
   border-radius: 999px;
   white-space: nowrap;
   transition: background 0.15s ease;
+}
+
+.cta svg {
+  font-size: 18px;
 }
 
 .cta:hover {
