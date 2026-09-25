@@ -1,23 +1,45 @@
+"use client";
+
+import { motion } from "framer-motion";
 import { career } from "../data/career";
 import styles from "./Career.module.css";
 
 export default function Career() {
   return (
     <section className={styles.section}>
-      <h2 className={styles.heading}>Career</h2>
+      <motion.h2
+        className={styles.heading}
+        initial={{ opacity: 0, x: -80 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.7, ease: "easeOut" }}
+      >
+        Career
+      </motion.h2>
 
       <div className={styles.list}>
         {career.map((item, i) => (
-          <a key={item.slug} href={`/career/${item.slug}`} className={styles.card}>
+          <motion.div
+            key={item.slug}
+            className={styles.card}
+            initial={{ opacity: 0, x: 80 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+            whileHover={{ scale: 1.015 }}
+          >
             <div className={styles.image}>
               {item.image && (
                 <img
                   src={item.image}
                   alt={item.imageAlt ?? item.role}
-                  className={styles.photo}
+                  className={
+                    item.imageFit === "contain"
+                      ? `${styles.photo} ${styles.photoContain}`
+                      : styles.photo
+                  }
                 />
               )}
-              <span className={styles.viewBadge}>View role</span>
             </div>
 
             <div className={styles.info}>
@@ -44,7 +66,7 @@ export default function Career() {
               )}
               <span className={styles.tag}>{item.period}</span>
             </div>
-          </a>
+          </motion.div>
         ))}
       </div>
     </section>
