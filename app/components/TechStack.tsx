@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import {
   SiReact,
   SiNodedotjs,
@@ -15,6 +18,8 @@ import {
   SiKubernetes,
   SiAngular,
   SiClaudecode,
+  SiLanggraph,
+  SiSpringboot,
 } from "react-icons/si";
 import { FaJava } from "react-icons/fa";
 import type { IconType } from "react-icons";
@@ -39,39 +44,63 @@ const icons: Record<string, IconType> = {
   SiKubernetes,
   SiAngular,
   SiClaudecode,
+  SiLanggraph,
+  SiSpringboot,
 };
 
 function Icon({ item }: { item: TechItem }) {
   const IconComp = icons[item.icon];
   if (!IconComp) return null;
-  return <IconComp color={item.color} />;
+  return <IconComp aria-hidden="true" />;
 }
 
 export default function TechStack() {
   return (
     <section className={styles.section}>
       <div className={styles.inner}>
-        <h2 className={styles.heading}>
-          Tech Stack <span className={styles.accent}>&amp; Tools</span>
-        </h2>
+        <motion.h2
+          className={styles.heading}
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.6 }}
+          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+        >
+          Tech stack and tools
+        </motion.h2>
 
-        <div className={styles.grid}>
-          {primaryTech.map((item) => (
-            <div key={item.name} className={styles.card}>
-              <div className={styles.tile}>
+        <ul className={styles.list}>
+          {primaryTech.map((item, i) => (
+            <motion.li
+              key={item.name}
+              className={styles.item}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.6 }}
+              transition={{
+                duration: 0.7,
+                delay: i * 0.07,
+                ease: [0.16, 1, 0.3, 1],
+              }}
+            >
+              <span className={styles.name}>{item.name}</span>
+              <span className={styles.use}>
+                {item.use}
                 <Icon item={item} />
-              </div>
-              <span className={styles.label}>{item.name}</span>
-            </div>
+              </span>
+            </motion.li>
           ))}
-        </div>
+        </ul>
       </div>
 
       <div className={styles.strip}>
         <div className={styles.marquee}>
           <div className={styles.track}>
             {[...toolStrip, ...toolStrip].map((item, i) => (
-              <span key={`${item.name}-${i}`} className={styles.stripItem}>
+              <span
+                key={`${item.name}-${i}`}
+                className={styles.stripItem}
+                aria-hidden={i >= toolStrip.length}
+              >
                 <Icon item={item} />
                 {item.name}
               </span>

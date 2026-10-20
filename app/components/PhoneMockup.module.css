@@ -4,11 +4,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(
-    160deg,
-    color-mix(in srgb, var(--accent) 10%, var(--surface)),
-    var(--surface)
-  );
+  background: var(--surface);
 }
 
 .phone {
@@ -17,8 +13,7 @@
   aspect-ratio: 48 / 100;
   flex-shrink: 0;
   border-radius: 26px;
-  background: #14161a;
-  box-shadow: 0 18px 40px -12px rgba(0, 0, 0, 0.45);
+  background: #0b1f13;
 }
 
 .screen {

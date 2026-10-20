@@ -7,7 +7,7 @@ import Footer from "./components/Footer";
 
 export default function Home() {
   return (
-    <main>
+    <main id="top">
       <Intro />
       <TechStack />
       <Career />

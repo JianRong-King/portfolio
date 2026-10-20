@@ -4,63 +4,61 @@ import styles from "./Contact.module.css";
 
 export default function Contact() {
   return (
-    <section className={styles.section}>
+    <section id="contact" className={styles.section}>
       <div className={styles.inner}>
         <div className={styles.info}>
-          <h2 className={styles.heading}>
-            Get in <span className={styles.accent}>touch!</span>
-          </h2>
+          <h2 className={styles.heading}>Get in touch</h2>
 
-          <div className={styles.list}>
+          <dl className={styles.list}>
             <div className={styles.item}>
-              <span className={styles.label}>LinkedIn</span>
-              <a
-                href={contact.linkedin.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.value}
-              >
-                <span className={styles.iconTile}>
-                  <FaLinkedin />
-                </span>
-                {contact.linkedin.label}
-              </a>
+              <dt className={styles.label}>LinkedIn</dt>
+              <dd>
+                <a
+                  href={contact.linkedin.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.value}
+                >
+                  <FaLinkedin aria-hidden="true" />
+                  {contact.linkedin.label}
+                </a>
+              </dd>
             </div>
 
             <div className={styles.item}>
-              <span className={styles.label}>Github</span>
-              <a
-                href={contact.github.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.value}
-              >
-                <span className={styles.iconTile}>
-                  <FaGithub />
-                </span>
-                {contact.github.label}
-              </a>
+              <dt className={styles.label}>GitHub</dt>
+              <dd>
+                <a
+                  href={contact.github.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.value}
+                >
+                  <FaGithub aria-hidden="true" />
+                  {contact.github.label}
+                </a>
+              </dd>
             </div>
 
             <div className={styles.item}>
-              <span className={styles.label}>Email</span>
-              <a href={`mailto:${contact.email}`} className={styles.value}>
-                <span className={styles.iconTile}>
-                  <FaEnvelope />
-                </span>
-                {contact.email}
-              </a>
+              <dt className={styles.label}>Email</dt>
+              <dd>
+                <a href={`mailto:${contact.email}`} className={styles.value}>
+                  <FaEnvelope aria-hidden="true" />
+                  {contact.email}
+                </a>
+              </dd>
             </div>
 
             <div className={styles.item}>
-              <span className={styles.label}>Active in</span>
-              <div className={styles.activeIn}>
+              <dt className={styles.label}>Active in</dt>
+              <dd className={styles.activeIn}>
                 {contact.activeIn.map((place) => (
                   <span key={place}>{place}</span>
                 ))}
-              </div>
+              </dd>
             </div>
-          </div>
+          </dl>
         </div>
 
         <div className={styles.mapCard}>

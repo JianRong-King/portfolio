@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
-import { Inter, Caveat, Playfair_Display } from "next/font/google";
+import { Albert_Sans, Caveat } from "next/font/google";
 import Nav from "./components/Nav";
+import MotionProvider from "./components/MotionProvider";
 import "./globals.css";
 
-const inter = Inter({
-  variable: "--font-inter",
+const albert = Albert_Sans({
+  variable: "--font-sans",
   subsets: ["latin"],
+  weight: ["400", "500"],
 });
 
 const caveat = Caveat({
@@ -13,15 +15,10 @@ const caveat = Caveat({
   subsets: ["latin"],
 });
 
-const playfair = Playfair_Display({
-  variable: "--font-serif",
-  subsets: ["latin"],
-  style: ["normal", "italic"],
-});
-
 export const metadata: Metadata = {
   title: "King Jian Rong",
-  description: "Style exploration for the new portfolio design.",
+  description:
+    "King Jian Rong, software engineer building AI agents, automation and full-stack apps.",
 };
 
 export default function RootLayout({
@@ -32,11 +29,21 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${caveat.variable} ${playfair.variable}`}
+      className={`${albert.variable} ${caveat.variable}`}
+      suppressHydrationWarning
     >
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: "document.documentElement.classList.add('js')",
+          }}
+        />
+      </head>
       <body>
-        <Nav />
-        {children}
+        <MotionProvider>
+          <Nav />
+          {children}
+        </MotionProvider>
       </body>
     </html>
   );

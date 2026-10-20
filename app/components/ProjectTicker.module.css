@@ -1,39 +1,48 @@
 .ticker {
-  width: 35%;
-  margin: 0 auto;
-  background: transparent;
-  border-radius: 16px;
-  padding: 12px 0 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  padding: 28px var(--gutter);
+  background: var(--accent);
+  color: var(--accent-ink);
 }
 
 .caption {
-  text-align: center;
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--text-muted);
-  margin-bottom: 22px;
+  font-size: var(--step-body);
+  font-weight: 500;
+  white-space: nowrap;
 }
 
 .row {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   flex-wrap: wrap;
-  gap: 72px;
+  gap: clamp(32px, 6vw, 96px);
 }
 
 .logo {
-  height: 30px;
+  height: 40px;
   width: auto;
-  max-width: 130px;
+  max-width: 160px;
   object-fit: contain;
-  flex-shrink: 0;
+  mix-blend-mode: multiply;
 }
 
 @media (max-width: 640px) {
+  .ticker {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
   .row {
-    gap: 32px;
+    justify-content: flex-start;
+    gap: 28px;
+  }
+
+  .logo {
+    height: 32px;
   }
 }

@@ -4,7 +4,7 @@ import styles from "./ProjectTicker.module.css";
 export default function ProjectTicker() {
   return (
     <div className={styles.ticker}>
-      <p className={styles.caption}>Contributed Projects</p>
+      <h2 className={styles.caption}>Contributed projects</h2>
 
       <div className={styles.row}>
         {contributedProjects.map((project) => (

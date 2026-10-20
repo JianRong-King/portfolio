@@ -6,32 +6,55 @@ export type SelectedWorkItem = {
   tag?: string;
   techStack?: string[];
   caseStudyUrl?: string;
+  liveUrl?: string;
   image?: string;
+  poster?: string;
   imageAlt?: string;
   imageRatio?: string;
   mockup?: "phones";
   screens?: number;
+  gallery?: { src: string; alt: string }[];
 };
 
 export const selectedWork: SelectedWorkItem[] = [
+  {
+    slug: "askmh",
+    title: "AskMH",
+    subtitle: "Full-Stack Web RAG Chatbot",
+    description:
+      "An agentic RAG chatbot that answers Malaysia Airlines passenger questions using their web FAQ as its knowledge base. Under the hood, a LangGraph state machine routes each message, retrieves and grades relevant articles, and generates grounded answers.",
+    techStack: ["Python", "LangGraph", "RAG", "Docker", "Agent Orchestration"],
+    caseStudyUrl: "https://github.com/JianRong-King/AskMH",
+    liveUrl: "https://askmh-194250607947.asia-southeast1.run.app/",
+  },
   {
     slug: "sign2text",
     title: "Sign2Text",
     description:
       "A full-stack web interface for realtime ASL sign language recognition, built to translate sign language gestures into text in real time.\nShortlisted for BP Final Year Award Presentation 2025.",
-    techStack: ["React", "Docker", "FastAPI", "WebSocket", "Model Deployment"],
+    techStack: ["Python", "PyTorch", "Docker", "WebSocket"],
     caseStudyUrl: "https://github.com/dboo0012/sign2text",
     image: "/work/sign2text-architecture.svg",
     imageAlt: "Sign2Text system architecture diagram",
     imageRatio: "1440 / 770",
+    gallery: [
+      {
+        src: "/work/sign2text-presentation.webp",
+        alt: "King Jian Rong presenting Sign2Text at the FYP Final Award Presentation",
+      },
+      {
+        src: "/work/sign2text-architecture.svg",
+        alt: "Sign2Text system architecture diagram",
+      },
+    ],
   },
   {
     slug: "nutritrack",
     title: "AI-Powered NutriTrack",
     subtitle: "Mobile App",
     description:
-      "Personalized AI powered nutrition tracking Android app built with Kotlin and MVVM architecture, using a Repository → ViewModel → DAO pattern with RoomDB. Handles API communication via Retrofit + Coroutines, multi-user login with persistent sessions, and integrates the Gemini GenAI API for dynamic nutrition tips alongside FruityVice for real-time fruit data.",
-    techStack: ["Kotlin", "MVVM", "AI Suggestion", "Social Leaderboard"],
+      "NutriTrack Pro is a personalized nutrition tracking Android application developed using Kotlin, Jetpack Compose, RoomDB, and MVVM architecture.",
+    techStack: ["Kotlin", "MVVM", "AI Suggestion", "Social Leaderboard", "Gradle", "Android Studio"],
     caseStudyUrl: "https://github.com/JianRong-King/AI-Nutrition-Android-Mobile-App",
     image: "/work/nutritrack.png",
     imageAlt: "NutriTrack app screens",
@@ -47,6 +70,7 @@ export const selectedWork: SelectedWorkItem[] = [
       "Developed a Guitar Hero game clone, that allows users to play guitar notes using their keyboard using asynchronous and functional programming. Leveraging RxJS observables for real-time input, animation, and pure state management.",
     techStack: ["Functional Programming", "TypeScript", "HTML", "CSS", "RxJS"],
     image: "/work/guitar-hero.mp4",
+    poster: "/work/guitar-hero-poster.jpg",
     imageAlt: "Guitar Hero style game gameplay",
     imageRatio: "2160 / 1440",
   },
@@ -58,6 +82,7 @@ export const selectedWork: SelectedWorkItem[] = [
     techStack: ["Java", "OOP", "User Story"],
     caseStudyUrl: "https://github.com/JianRong-King/Santorini",
     image: "/work/santorini.mp4",
+    poster: "/work/santorini-poster.jpg",
     imageAlt: "Santorini board game gameplay",
     imageRatio: "1460 / 1080",
   },

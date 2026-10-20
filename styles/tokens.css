@@ -1,11 +1,18 @@
 :root {
-  --bg: #ffffff;
-  --surface: #f5f5f5;
-  --pill: #f0f0f0;
-  --border: #e5e5e5;
-  --text: #171717;
-  --text-muted: #6b6b6b;
-  --accent: #f56a1f;
-  --accent-hover: #e05c14;
-  --ink-strong: #0a0a0a;
+  --bg: #133621;
+  --surface: #1a4429;
+  --ink: #f4d96c;
+  --muted: #c2b46a;
+  --accent: #f4d96c;
+  --accent-ink: #133621;
+
+  --step-small: clamp(0.875rem, 0.85rem + 0.1vw, 0.9375rem);
+  --step-body: clamp(1.0625rem, 1rem + 0.25vw, 1.1875rem);
+  --step-lead: clamp(1.25rem, 1.1rem + 0.7vw, 1.625rem);
+  --step-head: clamp(2rem, 1.3rem + 3.2vw, 4rem);
+  --step-display: clamp(2.25rem, 10vw, 9rem);
+
+  --gutter: clamp(16px, 3vw, 40px);
+  --section-gap: clamp(96px, 12vw, 200px);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
 }

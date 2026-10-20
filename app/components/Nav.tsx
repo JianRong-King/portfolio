@@ -3,6 +3,12 @@
 import { useLayoutEffect, useRef } from "react";
 import styles from "./Nav.module.css";
 
+const links = [
+  { href: "#career", label: "Career" },
+  { href: "#work", label: "Work" },
+  { href: "#contact", label: "Contact" },
+];
+
 export default function Nav() {
   const navRef = useRef<HTMLElement>(null);
 
@@ -24,9 +30,16 @@ export default function Nav() {
 
   return (
     <nav ref={navRef} className={styles.nav}>
-      <a href="/" className={styles.logo}>
+      <a href="/" className={styles.logo} aria-label="King Jian Rong, home">
         kjr
       </a>
+      <div className={styles.links}>
+        {links.map((link) => (
+          <a key={link.href} href={link.href} className={styles.link}>
+            {link.label}
+          </a>
+        ))}
+      </div>
     </nav>
   );
 }
