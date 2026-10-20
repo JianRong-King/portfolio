@@ -1,6 +1,6 @@
 {
  "url": "http://localhost:3000",
- "at": "2026-10-20T10:07:36.120Z",
+ "at": "2026-10-20T10:08:53.610Z",
  "allow": [],
  "viewports": [
   {
@@ -716,7 +716,7 @@
       "height": 1128,
       "words": 51,
       "media": 0,
-      "middle": 2669,
+      "middle": 2719,
       "heading": {
        "text": "Java",
        "size": 130,
@@ -724,8 +724,8 @@
       },
       "left": 0,
       "right": 0,
-      "textLeft": -1045,
-      "textRight": -2725,
+      "textLeft": -995,
+      "textRight": -2775,
       "fullBleed": false,
       "footer": false,
       "hero": false,
@@ -874,10 +874,10 @@
     0.19,
     0.43,
     0.37,
-    0.64,
     0.59,
-    0.71,
+    0.56,
     0.63,
+    0.72,
     0.92,
     0.97
    ],
@@ -895,8 +895,8 @@
      "h": 1024
     },
     "page": {
-     "height": 8394,
-     "screens": 8.2,
+     "height": 8482,
+     "screens": 8.3,
      "words": 344,
      "img": 8,
      "video": 2,
@@ -1228,7 +1228,7 @@
       "text": "AskMH Full-Stack Web RAG Chatbot",
       "words": 5,
       "chars": 32,
-      "lines": 1,
+      "lines": 2,
       "size": 45.4,
       "vw": 5.9,
       "font": "Albert Sans",
@@ -1240,7 +1240,7 @@
       "mono": false,
       "align": "left",
       "position": "left",
-      "widthRatio": 0.7,
+      "widthRatio": 0.52,
       "top": 3219,
       "tag": "h3",
       "kind": "heading"
@@ -1262,7 +1262,7 @@
       "align": "left",
       "position": "left",
       "widthRatio": 0.71,
-      "top": 3993,
+      "top": 4081,
       "tag": "h3",
       "kind": "heading"
      },
@@ -1283,7 +1283,7 @@
       "align": "left",
       "position": "left",
       "widthRatio": 0.71,
-      "top": 4804,
+      "top": 4892,
       "tag": "h3",
       "kind": "heading"
      },
@@ -1304,7 +1304,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.91,
-      "top": 5678,
+      "top": 5766,
       "tag": "h3",
       "kind": "heading"
      },
@@ -1325,7 +1325,7 @@
       "align": "left",
       "position": "left",
       "widthRatio": 0.71,
-      "top": 6544,
+      "top": 6632,
       "tag": "h3",
       "kind": "heading"
      },
@@ -1346,7 +1346,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.94,
-      "top": 6972,
+      "top": 7060,
       "tag": "h2",
       "kind": "heading"
      },
@@ -1367,7 +1367,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.94,
-      "top": 8204,
+      "top": 8292,
       "tag": "a",
       "kind": "heading"
      }
@@ -1416,7 +1416,7 @@
       "tracking": 0,
       "contrast": 9.5
      },
-     "measureChars": 60,
+     "measureChars": 45,
      "max": {
       "size": 96.8,
       "vw": 12.6,
@@ -1530,7 +1530,7 @@
      "w": 768,
      "h": 1024
     },
-    "pageH": 8394,
+    "pageH": 8482,
     "margins": {
      "left": 23,
      "right": 23
@@ -1566,7 +1566,7 @@
       "height": 725,
       "words": 56,
       "media": 0,
-      "middle": 3332,
+      "middle": 3358,
       "heading": {
        "text": "Java",
        "size": 69,
@@ -1574,8 +1574,8 @@
       },
       "left": 0,
       "right": 0,
-      "textLeft": -738,
-      "textRight": -3382,
+      "textLeft": -713,
+      "textRight": -3407,
       "fullBleed": false,
       "footer": false,
       "hero": false,
@@ -1609,7 +1609,7 @@
       "sel": "section#work.FeaturedWork-module__T9WFSa__section",
       "tag": "section",
       "top": 2586,
-      "height": 4210,
+      "height": 4298,
       "words": 232,
       "media": 8,
       "middle": 0,
@@ -1631,7 +1631,7 @@
      {
       "sel": "section#contact.Contact-module__gQiC5G__section",
       "tag": "section",
-      "top": 6892,
+      "top": 6980,
       "height": 1217,
       "words": 20,
       "media": 1,
@@ -1654,7 +1654,7 @@
      {
       "sel": "footer.Footer-module__nhiC3q__footer",
       "tag": "footer",
-      "top": 8108,
+      "top": 8196,
       "height": 285,
       "words": 14,
       "media": 0,
@@ -1688,11 +1688,7 @@
     "edges": [
      {
       "x": 23,
-      "n": 16
-     },
-     {
-      "x": 184,
-      "n": 1
+      "n": 17
      },
      {
       "x": 271,
@@ -2425,7 +2421,7 @@
       },
       "left": 0,
       "right": 0,
-      "textLeft": -537,
+      "textLeft": -536,
       "textRight": -2816,
       "fullBleed": false,
       "footer": false,
@@ -2578,7 +2574,7 @@
    "level": "WARN",
    "id": "empty-middle",
    "width": 1440,
-   "message": "1 section(s) have content at both edges and 2669px of nothing between: \"Java\"",
+   "message": "1 section(s) have content at both edges and 2719px of nothing between: \"Java\"",
    "fix": "Bring the two parts together on the grid, or put the picture or figure of the section in the middle. An empty middle third reads as a hole, the same as an empty half.",
    "alsoAt": [
     768

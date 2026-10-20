@@ -95,7 +95,7 @@ export default function FeaturedWork() {
     <section id="work" className={styles.section}>
       <div className={styles.header}>
         <motion.h2 className={styles.heading} {...rise()}>
-          Selected work
+          Projects
         </motion.h2>
       </div>
 
