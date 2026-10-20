@@ -13,19 +13,32 @@ export type SelectedWorkItem = {
   imageRatio?: string;
   mockup?: "phones";
   screens?: number;
-  gallery?: { src: string; alt: string }[];
+  gallery?: { src: string; alt: string; position?: string }[];
 };
 
 export const selectedWork: SelectedWorkItem[] = [
   {
     slug: "askmh",
     title: "AskMH",
-    subtitle: "Full-Stack Web RAG Chatbot",
+    subtitle: "Full-Stack RAG Chatbot Web App",
     description:
       "An agentic RAG chatbot that answers Malaysia Airlines passenger questions using their web FAQ as its knowledge base. Under the hood, a LangGraph state machine routes each message, retrieves and grades relevant articles, and generates grounded answers.",
-    techStack: ["Python", "LangGraph", "RAG", "Docker", "Agent Orchestration"],
+    techStack: ["Python", "FastAPI", "LangGraph", "RAG", "Docker", "Agent Orchestration"],
     caseStudyUrl: "https://github.com/JianRong-King/AskMH",
     liveUrl: "https://askmh-194250607947.asia-southeast1.run.app/",
+    image: "/work/askmh.webp",
+    imageAlt: "AskMH landing page, a Malaysia Airlines FAQ assistant",
+    imageRatio: "1440 / 770",
+    gallery: [
+      {
+        src: "/work/askmh.webp",
+        alt: "AskMH landing page, a Malaysia Airlines FAQ assistant",
+      },
+      {
+        src: "/work/askmh-chat.webp",
+        alt: "AskMH chat answering a delayed baggage question with cited FAQ sources",
+      },
+    ],
   },
   {
     slug: "sign2text",

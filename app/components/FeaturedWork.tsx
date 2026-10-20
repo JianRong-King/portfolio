@@ -25,7 +25,7 @@ function Gallery({
   slides,
   title,
 }: {
-  slides: { src: string; alt: string }[];
+  slides: { src: string; alt: string; position?: string }[];
   title: string;
 }) {
   const [index, setIndex] = useState(0);
@@ -61,6 +61,7 @@ function Gallery({
             src={slide.src}
             alt={slide.alt}
             className={styles.slide}
+            style={slide.position ? { objectPosition: slide.position } : undefined}
             aria-hidden={i !== index}
           />
         ))}
@@ -185,7 +186,7 @@ export default function FeaturedWork() {
                       className="button"
                     >
                       <FaExternalLinkAlt aria-hidden="true" />
-                      Live site
+                      Chat Now
                     </a>
                   )}
                   {item.caseStudyUrl && (

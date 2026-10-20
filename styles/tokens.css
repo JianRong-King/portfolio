@@ -12,7 +12,7 @@
   --step-head: clamp(2rem, 1.3rem + 3.2vw, 4rem);
   --step-display: clamp(2.25rem, 10vw, 9rem);
 
-  --gutter: clamp(16px, 3vw, 40px);
+  --gutter: max(clamp(20px, 6vw, 96px), calc((100vw - 1200px) / 2));
   --section-gap: clamp(96px, 12vw, 200px);
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
 }

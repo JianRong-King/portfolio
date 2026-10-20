@@ -1,6 +1,6 @@
 {
  "url": "http://localhost:3000",
- "at": "2026-10-20T10:08:53.610Z",
+ "at": "2026-10-20T10:29:04.424Z",
  "allow": [],
  "viewports": [
   {
@@ -9,17 +9,17 @@
    "load": "load",
    "screens": 12,
    "filled": [
-    0.29,
-    0.31,
+    0.3,
+    0.32,
     0.25,
-    0.22,
-    0.56,
-    0.74,
-    0.58,
-    0.56,
-    0.76,
+    0.21,
+    0.69,
+    0.61,
+    0.49,
+    0.44,
+    0.64,
     0.68,
-    0.47,
+    0.53,
     0.93
    ],
    "motion": {
@@ -36,25 +36,27 @@
      "h": 900
     },
     "page": {
-     "height": 11023,
-     "screens": 12.2,
+     "height": 10744,
+     "screens": 11.9,
      "words": 344,
-     "img": 8,
+     "img": 10,
      "video": 2,
      "canvas": 0,
-     "svg": 36,
+     "svg": 37,
      "sections": 5,
      "horizontalOverflow": 0,
      "overflowCulprits": [],
      "uiFragments": 0,
      "uiAbuse": false,
-     "realPictures": 10,
+     "realPictures": 12,
      "videoCount": 2,
      "uiPictures": 0,
      "pictureSamples": [
       "monash-crest.jpg",
       "ifast.webp",
       "monash-crest.jpg",
+      "askmh.webp",
+      "askmh-chat.webp",
       "sign2text-presentation.webp"
      ],
      "blendText": 0,
@@ -79,7 +81,7 @@
      "mono": false,
      "align": "center",
      "position": "center",
-     "widthRatio": 0.94,
+     "widthRatio": 0.83,
      "top": 360,
      "tag": "span",
      "kind": "heading"
@@ -129,7 +131,7 @@
       "mono": false,
       "align": "center",
       "position": "center",
-      "widthRatio": 0.94,
+      "widthRatio": 0.83,
       "top": 360,
       "tag": "span",
       "kind": "heading"
@@ -150,7 +152,7 @@
       "mono": false,
       "align": "left",
       "position": "center",
-      "widthRatio": 0.94,
+      "widthRatio": 0.83,
       "top": 1073,
       "tag": "h2",
       "kind": "heading"
@@ -171,7 +173,7 @@
       "mono": false,
       "align": "left",
       "position": "left",
-      "widthRatio": 0.56,
+      "widthRatio": 0.49,
       "top": 1188,
       "tag": "span",
       "kind": "statement"
@@ -192,7 +194,7 @@
       "mono": false,
       "align": "left",
       "position": "left",
-      "widthRatio": 0.56,
+      "widthRatio": 0.49,
       "top": 1318,
       "tag": "span",
       "kind": "statement"
@@ -213,7 +215,7 @@
       "mono": false,
       "align": "left",
       "position": "left",
-      "widthRatio": 0.56,
+      "widthRatio": 0.49,
       "top": 1447,
       "tag": "span",
       "kind": "statement"
@@ -234,7 +236,7 @@
       "mono": false,
       "align": "left",
       "position": "left",
-      "widthRatio": 0.56,
+      "widthRatio": 0.49,
       "top": 1577,
       "tag": "span",
       "kind": "statement"
@@ -255,7 +257,7 @@
       "mono": false,
       "align": "left",
       "position": "left",
-      "widthRatio": 0.56,
+      "widthRatio": 0.49,
       "top": 1731,
       "tag": "span",
       "kind": "statement"
@@ -276,7 +278,7 @@
       "mono": false,
       "align": "left",
       "position": "center",
-      "widthRatio": 0.94,
+      "widthRatio": 0.83,
       "top": 2201,
       "tag": "h2",
       "kind": "heading"
@@ -297,7 +299,7 @@
       "mono": false,
       "align": "left",
       "position": "center",
-      "widthRatio": 0.61,
+      "widthRatio": 0.5,
       "top": 2403,
       "tag": "h3",
       "kind": "heading"
@@ -318,7 +320,7 @@
       "mono": false,
       "align": "left",
       "position": "center",
-      "widthRatio": 0.57,
+      "widthRatio": 0.46,
       "top": 2694,
       "tag": "h3",
       "kind": "heading"
@@ -339,15 +341,15 @@
       "mono": false,
       "align": "left",
       "position": "center",
-      "widthRatio": 0.62,
+      "widthRatio": 0.51,
       "top": 2984,
       "tag": "h3",
       "kind": "heading"
      },
      {
-      "text": "Selected work",
-      "words": 2,
-      "chars": 13,
+      "text": "Projects",
+      "words": 1,
+      "chars": 8,
       "lines": 1,
       "size": 64,
       "vw": 4.4,
@@ -360,15 +362,15 @@
       "mono": false,
       "align": "left",
       "position": "left",
-      "widthRatio": 0.28,
+      "widthRatio": 0.16,
       "top": 3312,
       "tag": "h2",
       "kind": "heading"
      },
      {
-      "text": "AskMH Full-Stack Web RAG Chatbot",
-      "words": 5,
-      "chars": 32,
+      "text": "AskMH Full-Stack RAG Chatbot Web App",
+      "words": 6,
+      "chars": 36,
       "lines": 1,
       "size": 64,
       "vw": 4.4,
@@ -382,7 +384,7 @@
       "align": "left",
       "position": "left",
       "widthRatio": 0.51,
-      "top": 4211,
+      "top": 4356,
       "tag": "h3",
       "kind": "heading"
      },
@@ -403,7 +405,7 @@
       "align": "left",
       "position": "left",
       "widthRatio": 0.51,
-      "top": 5402,
+      "top": 5462,
       "tag": "h3",
       "kind": "heading"
      },
@@ -424,7 +426,7 @@
       "align": "left",
       "position": "left",
       "widthRatio": 0.51,
-      "top": 6686,
+      "top": 6646,
       "tag": "h3",
       "kind": "heading"
      },
@@ -445,7 +447,7 @@
       "align": "left",
       "position": "left",
       "widthRatio": 0.51,
-      "top": 8022,
+      "top": 7875,
       "tag": "h3",
       "kind": "heading"
      },
@@ -466,7 +468,7 @@
       "align": "left",
       "position": "left",
       "widthRatio": 0.51,
-      "top": 9462,
+      "top": 9197,
       "tag": "h3",
       "kind": "heading"
      },
@@ -487,7 +489,7 @@
       "align": "left",
       "position": "left",
       "widthRatio": 0.31,
-      "top": 10012,
+      "top": 9740,
       "tag": "h2",
       "kind": "heading"
      },
@@ -507,8 +509,8 @@
       "mono": false,
       "align": "left",
       "position": "center",
-      "widthRatio": 0.94,
-      "top": 10757,
+      "widthRatio": 0.83,
+      "top": 10478,
       "tag": "a",
       "kind": "heading"
      }
@@ -597,7 +599,7 @@
       },
       {
        "color": "#f4d96c",
-       "top": 10661,
+       "top": 10382,
        "hsl": {
         "h": 48,
         "s": 0.86,
@@ -616,7 +618,7 @@
       },
       {
        "color": "#133621",
-       "share": 0.06
+       "share": 0.05
       }
      ],
      "button": {
@@ -656,7 +658,7 @@
      "blurred": 0,
      "roundedBoxes": 7,
      "boxRadius": 26,
-     "squareMedia": 4,
+     "squareMedia": 6,
      "roundedMedia": 7,
      "mediaRadius": 21,
      "textShadow": 0,
@@ -680,10 +682,10 @@
      "w": 1440,
      "h": 900
     },
-    "pageH": 11023,
+    "pageH": 10744,
     "margins": {
-     "left": 40,
-     "right": 40
+     "left": 120,
+     "right": 120
     },
     "sections": [
      {
@@ -693,15 +695,15 @@
       "height": 829,
       "words": 17,
       "media": 0,
-      "middle": 86,
+      "middle": 13,
       "heading": {
        "text": "King Jian Rong",
        "size": 144,
        "tag": "h1"
       },
-      "left": 40,
-      "right": 40,
-      "textLeft": 40,
+      "left": 120,
+      "right": 120,
+      "textLeft": 120,
       "textRight": 265,
       "fullBleed": false,
       "footer": false,
@@ -716,7 +718,7 @@
       "height": 1128,
       "words": 51,
       "media": 0,
-      "middle": 2719,
+      "middle": 2756,
       "heading": {
        "text": "Java",
        "size": 130,
@@ -724,8 +726,8 @@
       },
       "left": 0,
       "right": 0,
-      "textLeft": -995,
-      "textRight": -2775,
+      "textLeft": -959,
+      "textRight": -2812,
       "fullBleed": false,
       "footer": false,
       "hero": false,
@@ -739,16 +741,16 @@
       "height": 1111,
       "words": 27,
       "media": 3,
-      "middle": 580,
+      "middle": 420,
       "heading": {
        "text": "Career",
        "size": 64,
        "tag": "h2"
       },
-      "left": 40,
-      "right": 40,
-      "textLeft": 40,
-      "textRight": 40,
+      "left": 120,
+      "right": 120,
+      "textLeft": 120,
+      "textRight": 120,
       "fullBleed": false,
       "footer": false,
       "hero": false,
@@ -759,19 +761,19 @@
       "sel": "section#work.FeaturedWork-module__T9WFSa__section",
       "tag": "section",
       "top": 3140,
-      "height": 6573,
+      "height": 6308,
       "words": 232,
-      "media": 8,
+      "media": 10,
       "middle": 0,
       "heading": {
-       "text": "Selected work",
+       "text": "Projects",
        "size": 64,
        "tag": "h2"
       },
-      "left": 40,
+      "left": 120,
       "right": 0,
-      "textLeft": 40,
-      "textRight": 68,
+      "textLeft": 120,
+      "textRight": 148,
       "fullBleed": false,
       "footer": false,
       "hero": false,
@@ -781,8 +783,8 @@
      {
       "sel": "section#contact.Contact-module__gQiC5G__section",
       "tag": "section",
-      "top": 9886,
-      "height": 775,
+      "top": 9620,
+      "height": 762,
       "words": 20,
       "media": 1,
       "middle": 104,
@@ -791,10 +793,10 @@
        "size": 64,
        "tag": "h2"
       },
-      "left": 40,
-      "right": 40,
-      "textLeft": 40,
-      "textRight": 1000,
+      "left": 120,
+      "right": 120,
+      "textLeft": 120,
+      "textRight": 920,
       "fullBleed": false,
       "footer": false,
       "hero": false,
@@ -804,20 +806,20 @@
      {
       "sel": "footer.Footer-module__nhiC3q__footer",
       "tag": "footer",
-      "top": 10661,
+      "top": 10382,
       "height": 363,
       "words": 14,
       "media": 0,
-      "middle": 145,
+      "middle": 0,
       "heading": {
        "text": "King Jian Rong",
        "size": 181,
        "tag": "a"
       },
-      "left": 40,
-      "right": 40,
-      "textLeft": 40,
-      "textRight": 40,
+      "left": 120,
+      "right": 120,
+      "textLeft": 120,
+      "textRight": 120,
       "fullBleed": false,
       "footer": true,
       "hero": false,
@@ -837,15 +839,15 @@
     "edgeText": [],
     "edges": [
      {
-      "x": 40,
+      "x": 120,
       "n": 16
      },
      {
-      "x": 260,
+      "x": 340,
       "n": 1
      },
      {
-      "x": 384,
+      "x": 464,
       "n": 1
      }
     ],
@@ -871,15 +873,15 @@
    "load": "load",
    "screens": 9,
    "filled": [
-    0.19,
-    0.43,
-    0.37,
-    0.59,
+    0.2,
+    0.46,
+    0.38,
+    0.6,
+    0.61,
     0.56,
-    0.63,
-    0.72,
-    0.92,
-    0.97
+    0.71,
+    0.93,
+    0.92
    ],
    "motion": {
     "elements": 36,
@@ -895,25 +897,27 @@
      "h": 1024
     },
     "page": {
-     "height": 8482,
+     "height": 8462,
      "screens": 8.3,
      "words": 344,
-     "img": 8,
+     "img": 10,
      "video": 2,
      "canvas": 0,
-     "svg": 36,
+     "svg": 37,
      "sections": 5,
      "horizontalOverflow": 0,
      "overflowCulprits": [],
      "uiFragments": 0,
      "uiAbuse": false,
-     "realPictures": 10,
+     "realPictures": 12,
      "videoCount": 2,
      "uiPictures": 0,
      "pictureSamples": [
       "monash-crest.jpg",
       "ifast.webp",
       "monash-crest.jpg",
+      "askmh.webp",
+      "askmh-chat.webp",
       "sign2text-presentation.webp"
      ],
      "blendText": 0,
@@ -938,7 +942,7 @@
      "mono": false,
      "align": "center",
      "position": "center",
-     "widthRatio": 0.94,
+     "widthRatio": 0.88,
      "top": 446,
      "tag": "span",
      "kind": "heading"
@@ -988,7 +992,7 @@
       "mono": false,
       "align": "center",
       "position": "center",
-      "widthRatio": 0.94,
+      "widthRatio": 0.88,
       "top": 446,
       "tag": "span",
       "kind": "heading"
@@ -1009,7 +1013,7 @@
       "mono": false,
       "align": "left",
       "position": "center",
-      "widthRatio": 0.94,
+      "widthRatio": 0.88,
       "top": 1120,
       "tag": "h2",
       "kind": "heading"
@@ -1030,7 +1034,7 @@
       "mono": false,
       "align": "left",
       "position": "left",
-      "widthRatio": 0.55,
+      "widthRatio": 0.49,
       "top": 1216,
       "tag": "span",
       "kind": "statement"
@@ -1051,7 +1055,7 @@
       "mono": false,
       "align": "left",
       "position": "left",
-      "widthRatio": 0.55,
+      "widthRatio": 0.51,
       "top": 1285,
       "tag": "span",
       "kind": "statement"
@@ -1072,7 +1076,7 @@
       "mono": false,
       "align": "left",
       "position": "left",
-      "widthRatio": 0.55,
+      "widthRatio": 0.51,
       "top": 1354,
       "tag": "span",
       "kind": "statement"
@@ -1093,7 +1097,7 @@
       "mono": false,
       "align": "left",
       "position": "left",
-      "widthRatio": 0.55,
+      "widthRatio": 0.51,
       "top": 1423,
       "tag": "span",
       "kind": "statement"
@@ -1114,7 +1118,7 @@
       "mono": false,
       "align": "left",
       "position": "left",
-      "widthRatio": 0.55,
+      "widthRatio": 0.51,
       "top": 1492,
       "tag": "span",
       "kind": "statement"
@@ -1135,7 +1139,7 @@
       "mono": false,
       "align": "left",
       "position": "center",
-      "widthRatio": 0.94,
+      "widthRatio": 0.88,
       "top": 1845,
       "tag": "h2",
       "kind": "heading"
@@ -1156,7 +1160,7 @@
       "mono": false,
       "align": "left",
       "position": "center",
-      "widthRatio": 0.48,
+      "widthRatio": 0.42,
       "top": 2002,
       "tag": "h3",
       "kind": "heading"
@@ -1177,7 +1181,7 @@
       "mono": false,
       "align": "left",
       "position": "center",
-      "widthRatio": 0.41,
+      "widthRatio": 0.35,
       "top": 2233,
       "tag": "h3",
       "kind": "heading"
@@ -1198,15 +1202,15 @@
       "mono": false,
       "align": "left",
       "position": "center",
-      "widthRatio": 0.5,
+      "widthRatio": 0.44,
       "top": 2464,
       "tag": "h3",
       "kind": "heading"
      },
      {
-      "text": "Selected work",
-      "words": 2,
-      "chars": 13,
+      "text": "Projects",
+      "words": 1,
+      "chars": 8,
       "lines": 1,
       "size": 45.4,
       "vw": 5.9,
@@ -1219,15 +1223,15 @@
       "mono": false,
       "align": "left",
       "position": "left",
-      "widthRatio": 0.37,
+      "widthRatio": 0.21,
       "top": 2682,
       "tag": "h2",
       "kind": "heading"
      },
      {
-      "text": "AskMH Full-Stack Web RAG Chatbot",
-      "words": 5,
-      "chars": 32,
+      "text": "AskMH Full-Stack RAG Chatbot Web App",
+      "words": 6,
+      "chars": 36,
       "lines": 2,
       "size": 45.4,
       "vw": 5.9,
@@ -1240,8 +1244,8 @@
       "mono": false,
       "align": "left",
       "position": "left",
-      "widthRatio": 0.52,
-      "top": 3219,
+      "widthRatio": 0.45,
+      "top": 3325,
       "tag": "h3",
       "kind": "heading"
      },
@@ -1261,8 +1265,8 @@
       "mono": false,
       "align": "left",
       "position": "left",
-      "widthRatio": 0.71,
-      "top": 4081,
+      "widthRatio": 0.65,
+      "top": 4190,
       "tag": "h3",
       "kind": "heading"
      },
@@ -1282,8 +1286,8 @@
       "mono": false,
       "align": "left",
       "position": "left",
-      "widthRatio": 0.71,
-      "top": 4892,
+      "widthRatio": 0.65,
+      "top": 4972,
       "tag": "h3",
       "kind": "heading"
      },
@@ -1303,8 +1307,8 @@
       "mono": false,
       "align": "left",
       "position": "center",
-      "widthRatio": 0.91,
-      "top": 5766,
+      "widthRatio": 0.88,
+      "top": 5815,
       "tag": "h3",
       "kind": "heading"
      },
@@ -1324,8 +1328,8 @@
       "mono": false,
       "align": "left",
       "position": "left",
-      "widthRatio": 0.71,
-      "top": 6632,
+      "widthRatio": 0.65,
+      "top": 6647,
       "tag": "h3",
       "kind": "heading"
      },
@@ -1345,8 +1349,8 @@
       "mono": false,
       "align": "left",
       "position": "center",
-      "widthRatio": 0.94,
-      "top": 7060,
+      "widthRatio": 0.88,
+      "top": 7075,
       "tag": "h2",
       "kind": "heading"
      },
@@ -1366,8 +1370,8 @@
       "mono": false,
       "align": "left",
       "position": "center",
-      "widthRatio": 0.94,
-      "top": 8292,
+      "widthRatio": 0.88,
+      "top": 8272,
       "tag": "a",
       "kind": "heading"
      }
@@ -1416,7 +1420,7 @@
       "tracking": 0,
       "contrast": 9.5
      },
-     "measureChars": 45,
+     "measureChars": 38,
      "max": {
       "size": 96.8,
       "vw": 12.6,
@@ -1466,7 +1470,7 @@
       },
       {
        "color": "#133621",
-       "share": 0.06
+       "share": 0.05
       }
      ],
      "button": {
@@ -1504,9 +1508,9 @@
      "outlinedBoxes": 0,
      "dashed": 0,
      "blurred": 0,
-     "roundedBoxes": 7,
-     "boxRadius": 26,
-     "squareMedia": 4,
+     "roundedBoxes": 5,
+     "boxRadius": 16,
+     "squareMedia": 6,
      "roundedMedia": 0,
      "mediaRadius": 0,
      "textShadow": 0,
@@ -1530,10 +1534,10 @@
      "w": 768,
      "h": 1024
     },
-    "pageH": 8482,
+    "pageH": 8462,
     "margins": {
-     "left": 23,
-     "right": 23
+     "left": 46,
+     "right": 46
     },
     "sections": [
      {
@@ -1549,9 +1553,9 @@
        "size": 77,
        "tag": "h1"
       },
-      "left": 23,
-      "right": 23,
-      "textLeft": 23,
+      "left": 46,
+      "right": 46,
+      "textLeft": 46,
       "textRight": 141,
       "fullBleed": false,
       "footer": false,
@@ -1566,7 +1570,7 @@
       "height": 725,
       "words": 56,
       "media": 0,
-      "middle": 3358,
+      "middle": 3362,
       "heading": {
        "text": "Java",
        "size": 69,
@@ -1574,8 +1578,8 @@
       },
       "left": 0,
       "right": 0,
-      "textLeft": -713,
-      "textRight": -3407,
+      "textLeft": -708,
+      "textRight": -3412,
       "fullBleed": false,
       "footer": false,
       "hero": false,
@@ -1589,16 +1593,16 @@
       "height": 837,
       "words": 27,
       "media": 3,
-      "middle": 98,
+      "middle": 51,
       "heading": {
        "text": "Career",
        "size": 45,
        "tag": "h2"
       },
-      "left": 23,
-      "right": 23,
-      "textLeft": 23,
-      "textRight": 23,
+      "left": 46,
+      "right": 46,
+      "textLeft": 46,
+      "textRight": 46,
       "fullBleed": false,
       "footer": false,
       "hero": false,
@@ -1609,19 +1613,19 @@
       "sel": "section#work.FeaturedWork-module__T9WFSa__section",
       "tag": "section",
       "top": 2586,
-      "height": 4298,
+      "height": 4313,
       "words": 232,
-      "media": 8,
+      "media": 10,
       "middle": 0,
       "heading": {
-       "text": "Selected work",
+       "text": "Projects",
        "size": 45,
        "tag": "h2"
       },
-      "left": 23,
+      "left": 46,
       "right": 0,
-      "textLeft": 23,
-      "textRight": 51,
+      "textLeft": 46,
+      "textRight": 53,
       "fullBleed": false,
       "footer": false,
       "hero": false,
@@ -1631,8 +1635,8 @@
      {
       "sel": "section#contact.Contact-module__gQiC5G__section",
       "tag": "section",
-      "top": 6980,
-      "height": 1217,
+      "top": 6995,
+      "height": 1182,
       "words": 20,
       "media": 1,
       "middle": 0,
@@ -1641,10 +1645,10 @@
        "size": 45,
        "tag": "h2"
       },
-      "left": 23,
-      "right": 23,
-      "textLeft": 23,
-      "textRight": 390,
+      "left": 46,
+      "right": 46,
+      "textLeft": 46,
+      "textRight": 367,
       "fullBleed": false,
       "footer": false,
       "hero": false,
@@ -1654,20 +1658,20 @@
      {
       "sel": "footer.Footer-module__nhiC3q__footer",
       "tag": "footer",
-      "top": 8196,
+      "top": 8176,
       "height": 285,
       "words": 14,
       "media": 0,
-      "middle": 40,
+      "middle": 0,
       "heading": {
        "text": "King Jian Rong",
        "size": 97,
        "tag": "a"
       },
-      "left": 23,
-      "right": 23,
-      "textLeft": 23,
-      "textRight": 23,
+      "left": 46,
+      "right": 46,
+      "textLeft": 46,
+      "textRight": 46,
       "fullBleed": false,
       "footer": true,
       "hero": false,
@@ -1687,11 +1691,11 @@
     "edgeText": [],
     "edges": [
      {
-      "x": 23,
+      "x": 46,
       "n": 17
      },
      {
-      "x": 271,
+      "x": 294,
       "n": 1
      }
     ],
@@ -1712,15 +1716,15 @@
    "load": "load",
    "screens": 9,
    "filled": [
-    0.25,
-    0.4,
-    0.25,
-    0.62,
-    0.51,
-    0.62,
-    0.66,
-    0.96,
-    0.96
+    0.26,
+    0.41,
+    0.26,
+    0.54,
+    0.45,
+    0.6,
+    0.61,
+    0.88,
+    0.97
    ],
    "motion": {
     "elements": 36,
@@ -1736,22 +1740,24 @@
      "h": 844
     },
     "page": {
-     "height": 7055,
-     "screens": 8.4,
+     "height": 7202,
+     "screens": 8.5,
      "words": 344,
-     "img": 8,
+     "img": 10,
      "video": 2,
      "canvas": 0,
-     "svg": 36,
+     "svg": 37,
      "sections": 5,
      "horizontalOverflow": 0,
      "overflowCulprits": [],
      "uiFragments": 0,
      "uiAbuse": false,
-     "realPictures": 3,
+     "realPictures": 5,
      "videoCount": 2,
      "uiPictures": 0,
      "pictureSamples": [
+      "askmh.webp",
+      "askmh-chat.webp",
       "sign2text-presentation.webp"
      ],
      "blendText": 0,
@@ -1776,7 +1782,7 @@
      "mono": false,
      "align": "center",
      "position": "center",
-     "widthRatio": 0.92,
+     "widthRatio": 0.88,
      "top": 315,
      "tag": "h1",
      "kind": "heading"
@@ -1826,7 +1832,7 @@
       "mono": false,
       "align": "center",
       "position": "center",
-      "widthRatio": 0.92,
+      "widthRatio": 0.88,
       "top": 315,
       "tag": "h1",
       "kind": "heading"
@@ -1847,7 +1853,7 @@
       "mono": false,
       "align": "left",
       "position": "center",
-      "widthRatio": 0.92,
+      "widthRatio": 0.88,
       "top": 940,
       "tag": "h2",
       "kind": "heading"
@@ -1868,7 +1874,7 @@
       "mono": false,
       "align": "left",
       "position": "center",
-      "widthRatio": 0.92,
+      "widthRatio": 0.88,
       "top": 1023,
       "tag": "span",
       "kind": "statement"
@@ -1889,7 +1895,7 @@
       "mono": false,
       "align": "left",
       "position": "center",
-      "widthRatio": 0.92,
+      "widthRatio": 0.88,
       "top": 1119,
       "tag": "span",
       "kind": "statement"
@@ -1910,7 +1916,7 @@
       "mono": false,
       "align": "left",
       "position": "center",
-      "widthRatio": 0.92,
+      "widthRatio": 0.88,
       "top": 1215,
       "tag": "span",
       "kind": "statement"
@@ -1931,7 +1937,7 @@
       "mono": false,
       "align": "left",
       "position": "center",
-      "widthRatio": 0.92,
+      "widthRatio": 0.88,
       "top": 1312,
       "tag": "span",
       "kind": "statement"
@@ -1952,7 +1958,7 @@
       "mono": false,
       "align": "left",
       "position": "center",
-      "widthRatio": 0.92,
+      "widthRatio": 0.88,
       "top": 1408,
       "tag": "span",
       "kind": "statement"
@@ -1973,7 +1979,7 @@
       "mono": false,
       "align": "left",
       "position": "center",
-      "widthRatio": 0.92,
+      "widthRatio": 0.88,
       "top": 1764,
       "tag": "h2",
       "kind": "heading"
@@ -1994,7 +2000,7 @@
       "mono": false,
       "align": "left",
       "position": "right",
-      "widthRatio": 0.63,
+      "widthRatio": 0.59,
       "top": 1863,
       "tag": "h3",
       "kind": "heading"
@@ -2015,7 +2021,7 @@
       "mono": false,
       "align": "left",
       "position": "right",
-      "widthRatio": 0.63,
+      "widthRatio": 0.59,
       "top": 2025,
       "tag": "h3",
       "kind": "heading"
@@ -2036,15 +2042,15 @@
       "mono": false,
       "align": "left",
       "position": "right",
-      "widthRatio": 0.63,
+      "widthRatio": 0.59,
       "top": 2188,
       "tag": "h3",
       "kind": "heading"
      },
      {
-      "text": "Selected work",
-      "words": 2,
-      "chars": 13,
+      "text": "Projects",
+      "words": 1,
+      "chars": 8,
       "lines": 1,
       "size": 33.3,
       "vw": 8.5,
@@ -2057,16 +2063,16 @@
       "mono": false,
       "align": "left",
       "position": "left",
-      "widthRatio": 0.53,
+      "widthRatio": 0.31,
       "top": 2382,
       "tag": "h2",
       "kind": "heading"
      },
      {
-      "text": "AskMH Full-Stack Web RAG Chatbot",
-      "words": 5,
-      "chars": 32,
-      "lines": 1,
+      "text": "AskMH Full-Stack RAG Chatbot Web App",
+      "words": 6,
+      "chars": 36,
+      "lines": 2,
       "size": 33.3,
       "vw": 8.5,
       "font": "Albert Sans",
@@ -2078,8 +2084,8 @@
       "mono": false,
       "align": "left",
       "position": "center",
-      "widthRatio": 0.92,
-      "top": 2701,
+      "widthRatio": 0.88,
+      "top": 2759,
       "tag": "h3",
       "kind": "heading"
      },
@@ -2099,8 +2105,8 @@
       "mono": false,
       "align": "left",
       "position": "center",
-      "widthRatio": 0.92,
-      "top": 3383,
+      "widthRatio": 0.88,
+      "top": 3481,
       "tag": "h3",
       "kind": "heading"
      },
@@ -2120,8 +2126,8 @@
       "mono": false,
       "align": "left",
       "position": "center",
-      "widthRatio": 0.92,
-      "top": 4034,
+      "widthRatio": 0.88,
+      "top": 4149,
       "tag": "h3",
       "kind": "heading"
      },
@@ -2141,8 +2147,8 @@
       "mono": false,
       "align": "left",
       "position": "center",
-      "widthRatio": 0.92,
-      "top": 4732,
+      "widthRatio": 0.88,
+      "top": 4875,
       "tag": "h3",
       "kind": "heading"
      },
@@ -2162,8 +2168,8 @@
       "mono": false,
       "align": "left",
       "position": "center",
-      "widthRatio": 0.92,
-      "top": 5416,
+      "widthRatio": 0.88,
+      "top": 5547,
       "tag": "h3",
       "kind": "heading"
      },
@@ -2183,8 +2189,8 @@
       "mono": false,
       "align": "left",
       "position": "center",
-      "widthRatio": 0.92,
-      "top": 5921,
+      "widthRatio": 0.88,
+      "top": 6079,
       "tag": "h2",
       "kind": "heading"
      },
@@ -2204,8 +2210,8 @@
       "mono": false,
       "align": "left",
       "position": "center",
-      "widthRatio": 0.92,
-      "top": 6846,
+      "widthRatio": 0.88,
+      "top": 6993,
       "tag": "a",
       "kind": "heading"
      }
@@ -2254,7 +2260,7 @@
       "tracking": 0,
       "contrast": 9.5
      },
-     "measureChars": 42,
+     "measureChars": 40,
      "max": {
       "size": 52.7,
       "vw": 13.5,
@@ -2285,7 +2291,7 @@
      "sectionBgs": [
       {
        "color": "#1a4429",
-       "top": 5841,
+       "top": 5999,
        "hsl": {
         "h": 141,
         "s": 0.45,
@@ -2294,7 +2300,7 @@
       },
       {
        "color": "#f4d96c",
-       "top": 6750,
+       "top": 6897,
        "hsl": {
         "h": 48,
         "s": 0.86,
@@ -2305,7 +2311,7 @@
      "textColors": [
       {
        "color": "#f4d96c",
-       "share": 0.87
+       "share": 0.86
       },
       {
        "color": "#c2b46a",
@@ -2313,7 +2319,7 @@
       },
       {
        "color": "#133621",
-       "share": 0.06
+       "share": 0.05
       }
      ],
      "button": {
@@ -2353,7 +2359,7 @@
      "blurred": 0,
      "roundedBoxes": 0,
      "boxRadius": 0,
-     "squareMedia": 4,
+     "squareMedia": 6,
      "roundedMedia": 0,
      "mediaRadius": 0,
      "textShadow": 0,
@@ -2377,10 +2383,10 @@
      "w": 390,
      "h": 844
     },
-    "pageH": 7055,
+    "pageH": 7202,
     "margins": {
-     "left": 16,
-     "right": 16
+     "left": 23,
+     "right": 23
     },
     "sections": [
      {
@@ -2396,9 +2402,9 @@
        "size": 39,
        "tag": "h1"
       },
-      "left": 16,
-      "right": 65,
-      "textLeft": 16,
+      "left": 23,
+      "right": 58,
+      "textLeft": 23,
       "textRight": 72,
       "fullBleed": false,
       "footer": false,
@@ -2413,7 +2419,7 @@
       "height": 824,
       "words": 56,
       "media": 0,
-      "middle": 2772,
+      "middle": 2781,
       "heading": {
        "text": "Java",
        "size": 51,
@@ -2421,8 +2427,8 @@
       },
       "left": 0,
       "right": 0,
-      "textLeft": -536,
-      "textRight": -2816,
+      "textLeft": -528,
+      "textRight": -2824,
       "fullBleed": false,
       "footer": false,
       "hero": false,
@@ -2442,10 +2448,10 @@
        "size": 33,
        "tag": "h2"
       },
-      "left": 16,
-      "right": 45,
-      "textLeft": 16,
-      "textRight": 45,
+      "left": 23,
+      "right": 38,
+      "textLeft": 23,
+      "textRight": 38,
       "fullBleed": false,
       "footer": false,
       "hero": false,
@@ -2456,19 +2462,19 @@
       "sel": "section#work.FeaturedWork-module__T9WFSa__section",
       "tag": "section",
       "top": 2286,
-      "height": 3459,
+      "height": 3617,
       "words": 232,
-      "media": 4,
+      "media": 6,
       "middle": 0,
       "heading": {
-       "text": "Selected work",
+       "text": "Projects",
        "size": 33,
        "tag": "h2"
       },
-      "left": 16,
+      "left": 23,
       "right": 0,
-      "textLeft": 16,
-      "textRight": 19,
+      "textLeft": 23,
+      "textRight": 24,
       "fullBleed": false,
       "footer": false,
       "hero": false,
@@ -2478,8 +2484,8 @@
      {
       "sel": "section#contact.Contact-module__gQiC5G__section",
       "tag": "section",
-      "top": 5841,
-      "height": 909,
+      "top": 5999,
+      "height": 898,
       "words": 20,
       "media": 1,
       "middle": 0,
@@ -2488,10 +2494,10 @@
        "size": 33,
        "tag": "h2"
       },
-      "left": 16,
-      "right": 16,
-      "textLeft": 16,
-      "textRight": 59,
+      "left": 23,
+      "right": 23,
+      "textLeft": 23,
+      "textRight": 51,
       "fullBleed": false,
       "footer": false,
       "hero": false,
@@ -2501,7 +2507,7 @@
      {
       "sel": "footer.Footer-module__nhiC3q__footer",
       "tag": "footer",
-      "top": 6750,
+      "top": 6897,
       "height": 304,
       "words": 14,
       "media": 0,
@@ -2511,10 +2517,10 @@
        "size": 53,
        "tag": "a"
       },
-      "left": 16,
-      "right": 45,
-      "textLeft": 16,
-      "textRight": 45,
+      "left": 23,
+      "right": 37,
+      "textLeft": 23,
+      "textRight": 37,
       "fullBleed": false,
       "footer": true,
       "hero": false,
@@ -2534,15 +2540,11 @@
     "edgeText": [],
     "edges": [
      {
-      "x": 16,
-      "n": 16
+      "x": 23,
+      "n": 17
      },
      {
-      "x": 138,
-      "n": 1
-     },
-     {
-      "x": 202,
+      "x": 210,
       "n": 1
      }
     ],
@@ -2574,7 +2576,7 @@
    "level": "WARN",
    "id": "empty-middle",
    "width": 1440,
-   "message": "1 section(s) have content at both edges and 2719px of nothing between: \"Java\"",
+   "message": "1 section(s) have content at both edges and 2756px of nothing between: \"Java\"",
    "fix": "Bring the two parts together on the grid, or put the picture or figure of the section in the middle. An empty middle third reads as a hole, the same as an empty half.",
    "alsoAt": [
     768
