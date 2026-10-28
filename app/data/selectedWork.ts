@@ -41,6 +41,25 @@ export const selectedWork: SelectedWorkItem[] = [
     ],
   },
   {
+    slug: "justpay",
+    title: "JustPay",
+    subtitle: "Multi-Currency Wallet API",
+    description:
+      "A multi-currency wallet REST API modelled on WorldFirst's World Account, with idempotent transfers, deadlock-safe row locking and ledger-reconciled balances. Covered by 36 integration tests in CI and built with Claude Code through a spec-driven workflow.",
+    techStack: [
+      "Java 21",
+      "Spring Boot",
+      "PostgreSQL",
+      "Docker",
+      "GitHub Actions",
+      "Claude Code",
+    ],
+    caseStudyUrl: "https://github.com/JianRong-King/JustPay-API",
+    image: "/work/justpay.webp",
+    imageAlt: "JustPay logo",
+    imageRatio: "1440 / 770",
+  },
+  {
     slug: "sign2text",
     title: "Sign2Text",
     description:
