@@ -5,15 +5,17 @@ export type AgentRun = {
   costUsd: number;
 };
 
-function describeToolUse(input: Record<string, unknown>): string {
-  return String(input.file_path ?? input.pattern ?? input.path ?? "");
-}
-
 function logProgress(label: string, message: SDKMessage): void {
-  if (message.type !== "assistant") return;
-  for (const block of message.message.content) {
-    if (block.type === "tool_use") {
-      console.error(`[${label}] ${block.name} ${describeToolUse(block.input as Record<string, unknown>)}`);
+  if (message.type === "assistant") {
+    const u = message.message.usage;
+    if (process.env.HEALER_DEBUG) console.error(`[${label}] call: in ${u.input_tokens} / cache write ${u.cache_creation_input_tokens} / cache read ${u.cache_read_input_tokens}`);
+    for (const block of message.message.content) {
+      if (block.type === "tool_use") console.error(`[${label}] ${block.name} ${JSON.stringify(block.input).slice(0, 200)}`);
+    }
+  }
+  if (message.type === "user" && Array.isArray(message.message.content)) {
+    for (const block of message.message.content) {
+      if (block.type === "tool_result") console.error(`[${label}]   -> result ${JSON.stringify(block.content ?? "").length} chars`);
     }
   }
 }
@@ -33,6 +35,9 @@ export async function runAgent(label: string, prompt: string, options: Options):
   const { input_tokens, cache_creation_input_tokens, cache_read_input_tokens, output_tokens } = result.usage;
   const tokens = `in ${input_tokens} / cache write ${cache_creation_input_tokens} / cache read ${cache_read_input_tokens} / out ${output_tokens}`;
   console.error(`[${label}] ${result.subtype}, ${result.num_turns} turns, ${tokens}, $${cost}`);
+  for (const [model, usage] of Object.entries(result.modelUsage ?? {})) {
+    console.error(`[${label}]   ${model}: ${JSON.stringify(usage)}`);
+  }
   return { result, costUsd: result.total_cost_usd };
 }
 

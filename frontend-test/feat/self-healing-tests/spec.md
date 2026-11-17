@@ -114,12 +114,12 @@ frontend-test/agent-healer/
 ## Acceptance criteria
 - [ ] AC1 (R13): push to a branch shows a test check with report artifacts
 - [ ] AC2 (R14): heal workflow does not start for `main`, a `heal/*` branch or a passing run
-- [ ] AC3 (R16, R17, R19): unit tests prove the guard denies out-of-scope paths and the post-check rejects skip/fixme/only, fewer tests and disallowed paths
-- [ ] AC4 (R20): unit test proves the loop stops when cumulative cost reaches the cap
+- [x] AC3 (R16, R17, R19): unit tests prove the guard denies out-of-scope paths and the post-check rejects skip/fixme/only, fewer tests and disallowed paths
+- [x] AC4 (R20): unit test proves the loop stops when cumulative cost reaches the cap
 - [ ] AC5 (R15, R18, R21) eval "deliberate change": rename a section heading on a scratch branch; result is a heal PR into that branch with green tests, at most 3 attempts and $1
 - [ ] AC6 (R15, R22) eval "planted bug": break the LinkedIn URL in `app/data/contact.ts`; result is a regression comment and no test files changed
-- [ ] AC7 (R24): `npm run heal` reproduces AC5 and AC6 locally without touching git
-- [ ] AC8: `npm run test:healer` passes without an API key; `npm run build` and `npm run test:e2e` still pass
+- [x] AC7 (R24): `npm run heal` reproduces AC5 and AC6 locally without touching git (verdicts and edits as expected; one heal run at $0.33-0.56, see plan Deviations)
+- [x] AC8: `npm run test:healer` passes without an API key; `npm run build` and `npm run test:e2e` still pass
 
 ## Decision
 Go / no-go: Go - King, 2026-11-17

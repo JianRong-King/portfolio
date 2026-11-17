@@ -79,4 +79,15 @@ Steps marked (P) run in parallel via forked subagents once step 1 is done; each 
 - Running the healer against the CI artifact instead of rerunning - reruns are needed after each fix anyway, and keep local and CI paths identical.
 
 ## Deviations
-<Filled during implementation.>
+- Parallel work: Fork A wrote guard/postCheck/budget/report + tests, Fork B wrote both workflows and the CI JSON reporter, main session wrote the rest. Shared types were added to `config.ts` before forking.
+- Local auth: evals ran with King's `ant auth login` OAuth profile instead of an API key. CI still needs the `ANTHROPIC_API_KEY` secret.
+- Agents get a `tools` list, not just `allowedTools`. Without it every built-in tool definition is sent (about $0.19 per call on Opus 4.6); with it about $0.02, and Bash does not exist for the agent at all.
+- Agents get an explicit `effort` (classify `medium`, fix `low`) and tighter `maxTurns` (8 / 15). Default adaptive thinking made cost swing from $0.06 to $1.20 for the same task.
+- New read-scope hook (`agents/hooks.ts`): Read/Grep/Glob only inside `frontend-test/`, `app/`, `styles/` and `CLAUDE.md`; Grep/Glob must name a path. Covered by `tests/r16-read-scope.test.ts`.
+- `runAgent` keeps the result when the SDK throws on `error_max_budget_usd`, so a budget stop becomes a clean give-up instead of a crash. It logs each tool call, result size and per-model cost; `HEALER_DEBUG=1` adds per-call token counts.
+- Known cost floor (accepted by King): each tool-using turn of the Agent SDK carries a fixed ~113k cached-token overhead on Opus 4.6, independent of settings, skills or tool results. A heal therefore costs about $0.15-0.55; classify (no tool turns) costs $0.01-0.06. Alternative of returning edits as structured output (one call, ~$0.05) was offered and declined in favour of the simpler tool-using agent.
+- `maxBudgetUsd` is checked between turns, so a single run can overshoot the $0.90 internal cap (seen: $1.20, $1.24); both cases gave up without wrong edits.
+- Local eval results:
+  - Eval 1 (Career heading renamed to Experience): `test_outdated` for R5 and R9, one edit to `frontend-test/data/expected.ts`, 53/53 passing; $0.33 and $0.56 on successful runs, two runs stopped at budget.
+  - Eval 2 (LinkedIn URL typo `linkedn.com`): `possible_regression` for R10 and R12 with the typo named in the reason, no fix attempt, no files changed; $0.06 on both runs.
+- Eval spend during implementation: about $5.30 including smoke tests and cost debugging.
