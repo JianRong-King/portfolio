@@ -66,7 +66,7 @@ export function completeClassifications(failures: FailingTest[], returned: Class
 }
 
 export async function classify(repoRoot: string, failures: FailingTest[], diff: string, budgetUsd: number) {
-  const { result, costUsd } = await runAgent(classifyPrompt(failures, diff), classifyOptions(repoRoot, budgetUsd));
+  const { result, costUsd } = await runAgent("classify", classifyPrompt(failures, diff), classifyOptions(repoRoot, budgetUsd));
   if (result.subtype !== "success") return { classifications: null, costUsd, stopReason: result.subtype };
   const output = result.structured_output as { classifications: Classification[] } | undefined;
   return {

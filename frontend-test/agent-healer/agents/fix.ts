@@ -67,6 +67,7 @@ export async function fix(
   budgetUsd: number
 ) {
   const { result, costUsd } = await runAgent(
+    "fix",
     fixPrompt(failures, classifications, diff, feedback),
     fixOptions(repoRoot, budgetUsd)
   );
