@@ -14,4 +14,6 @@ export async function runAgent(prompt: string, options: Options): Promise<AgentR
   return { result, costUsd: result.total_cost_usd };
 }
 
+export const readTools = ["Read", "Glob", "Grep"];
+export const editTools = [...readTools, "Edit", "Write"];
 export const blockedTools = ["Bash", "NotebookEdit", "WebFetch", "WebSearch", "Task"];

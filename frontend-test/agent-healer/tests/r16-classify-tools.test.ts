@@ -7,6 +7,7 @@ const editTools = ["Edit", "Write", "Bash", "NotebookEdit"];
 
 test("classify step only gets read-only tools", () => {
   const options = classifyOptions("/repo", 0.5);
+  assert.deepEqual(options.tools, ["Read", "Glob", "Grep"]);
   assert.deepEqual(options.allowedTools, ["Read", "Glob", "Grep"]);
   for (const tool of editTools) assert.ok(options.disallowedTools?.includes(tool), `${tool} must be blocked`);
   assert.equal(options.permissionMode, "dontAsk");
@@ -16,6 +17,7 @@ test("classify step only gets read-only tools", () => {
 
 test("fix step has no shell and a PreToolUse guard on edits", () => {
   const options = fixOptions("/repo", 0.4);
+  assert.deepEqual(options.tools, ["Read", "Glob", "Grep", "Edit", "Write"]);
   assert.ok(!options.allowedTools?.includes("Bash"));
   assert.ok(options.disallowedTools?.includes("Bash"));
   assert.equal(options.hooks?.PreToolUse?.[0]?.matcher, "Edit|Write");

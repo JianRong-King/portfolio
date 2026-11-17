@@ -1,7 +1,7 @@
 import type { HookCallback, Options, PreToolUseHookInput } from "@anthropic-ai/claude-agent-sdk";
 import { config, type Classification, type FailingTest } from "../config";
 import { isEditAllowed } from "../guard";
-import { blockedTools, runAgent } from "./run";
+import { blockedTools, editTools, runAgent } from "./run";
 
 const systemPrompt = `You update outdated Playwright end-to-end tests after an intentional change to a portfolio website.
 Rules:
@@ -31,7 +31,8 @@ export function fixOptions(repoRoot: string, budgetUsd: number): Options {
     model: config.model,
     cwd: repoRoot,
     systemPrompt,
-    allowedTools: ["Read", "Glob", "Grep", "Edit", "Write"],
+    tools: editTools,
+    allowedTools: editTools,
     disallowedTools: blockedTools,
     permissionMode: "dontAsk",
     settingSources: ["project"],

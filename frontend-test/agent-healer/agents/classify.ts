@@ -1,6 +1,6 @@
 import type { Options } from "@anthropic-ai/claude-agent-sdk";
 import { config, type Classification, type FailingTest } from "../config";
-import { blockedTools, runAgent } from "./run";
+import { blockedTools, readTools, runAgent } from "./run";
 
 const schema = {
   type: "object",
@@ -38,7 +38,8 @@ export function classifyOptions(repoRoot: string, budgetUsd: number): Options {
     model: config.model,
     cwd: repoRoot,
     systemPrompt,
-    allowedTools: ["Read", "Glob", "Grep"],
+    tools: readTools,
+    allowedTools: readTools,
     disallowedTools: ["Edit", "Write", ...blockedTools],
     permissionMode: "dontAsk",
     settingSources: ["project"],
