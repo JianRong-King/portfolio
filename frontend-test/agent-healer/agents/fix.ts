@@ -9,6 +9,7 @@ Rules:
 - Prefer updating expected values in frontend-test/data/expected.ts and locators in frontend-test/pages/HomePage.ts over changing spec logic.
 - Make the tests match the new intended site behaviour shown in the diff. Never weaken a test: do not remove assertions, delete tests, or add .skip, .fixme or .only.
 - Keep the existing code style: no comments, small focused changes.
+- The site diff already shows what changed. Search only inside frontend-test/, make the smallest edit that fixes the listed tests, then stop. Do not re-read files to verify.
 You cannot run commands; the tests are rerun for you after you finish.`;
 
 function pathGuard(repoRoot: string): HookCallback {
