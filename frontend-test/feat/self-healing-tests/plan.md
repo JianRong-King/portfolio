@@ -1,6 +1,6 @@
 # Plan: Self-healing frontend test loop
 
-- Status: draft
+- Status: in progress
 - Spec: [spec.md](./spec.md)
 - Approver: King
 - Date: 2026-11-17

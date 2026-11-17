@@ -7,9 +7,12 @@
     "build": "next build",
     "start": "next start",
     "test:e2e": "playwright test",
-    "test:e2e:report": "playwright show-report"
+    "test:e2e:report": "playwright show-report",
+    "heal": "tsx frontend-test/agent-healer/index.ts",
+    "test:healer": "tsx --test frontend-test/agent-healer/tests/*.test.ts"
   },
   "dependencies": {
+    "@anthropic-ai/claude-agent-sdk": "^0.3.326",
     "framer-motion": "^13.4.4",
     "next": "16.2.11",
     "react": "19.2.4",
@@ -21,6 +24,7 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "tsx": "^4.23.15",
     "typescript": "^5"
   }
 }

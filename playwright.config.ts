@@ -10,7 +10,11 @@ export default defineConfig({
   forbidOnly: isCI,
   retries: isCI ? 2 : 0,
   reporter: isCI
-    ? [["github"], ["html", { open: "never" }]]
+    ? [
+        ["github"],
+        ["html", { open: "never" }],
+        ["json", { outputFile: "test-results-json/results.json" }],
+      ]
     : [["list"], ["html", { open: "never" }]],
   use: {
     baseURL,
