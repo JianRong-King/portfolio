@@ -14,6 +14,7 @@ test("classify step only gets read-only tools", () => {
   assert.equal(options.maxBudgetUsd, 0.5);
   assert.equal(options.outputFormat?.type, "json_schema");
   assert.equal(options.effort, "medium");
+  assert.deepEqual(options.hooks?.PreToolUse?.map((m) => m.matcher), ["Read|Grep|Glob"]);
 });
 
 test("fix step has no shell and a PreToolUse guard on edits", () => {
@@ -21,7 +22,7 @@ test("fix step has no shell and a PreToolUse guard on edits", () => {
   assert.deepEqual(options.tools, ["Read", "Glob", "Grep", "Edit", "Write"]);
   assert.ok(!options.allowedTools?.includes("Bash"));
   assert.ok(options.disallowedTools?.includes("Bash"));
-  assert.equal(options.hooks?.PreToolUse?.[0]?.matcher, "Edit|Write");
+  assert.deepEqual(options.hooks?.PreToolUse?.map((m) => m.matcher), ["Read|Grep|Glob", "Edit|Write"]);
   assert.equal(options.maxBudgetUsd, 0.4);
   assert.equal(options.effort, "low");
 });

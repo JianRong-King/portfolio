@@ -30,8 +30,9 @@ export async function runAgent(label: string, prompt: string, options: Options):
   }
   if (!result) throw new Error("Agent ended without a result message");
   const cost = result.total_cost_usd.toFixed(4);
-  const tokens = result.usage.output_tokens;
-  console.error(`[${label}] ${result.subtype}, ${result.num_turns} turns, ${tokens} output tokens, $${cost}`);
+  const { input_tokens, cache_creation_input_tokens, cache_read_input_tokens, output_tokens } = result.usage;
+  const tokens = `in ${input_tokens} / cache write ${cache_creation_input_tokens} / cache read ${cache_read_input_tokens} / out ${output_tokens}`;
+  console.error(`[${label}] ${result.subtype}, ${result.num_turns} turns, ${tokens}, $${cost}`);
   return { result, costUsd: result.total_cost_usd };
 }
 

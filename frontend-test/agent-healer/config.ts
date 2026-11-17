@@ -11,6 +11,8 @@ export const config = {
     fix: "low",
   },
   editableDirs: ["frontend-test/pages/", "frontend-test/data/", "frontend-test/tests/"],
+  readableDirs: ["frontend-test/", "app/", "styles/"],
+  readableFiles: ["CLAUDE.md"],
   siteDirs: ["app/", "styles/", "public/"],
   testsDir: "frontend-test/tests/",
   defaultBranch: "main",

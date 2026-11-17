@@ -1,5 +1,6 @@
 import type { Options } from "@anthropic-ai/claude-agent-sdk";
 import { config, type Classification, type FailingTest } from "../config";
+import { readHooks } from "./hooks";
 import { blockedTools, readTools, runAgent } from "./run";
 
 const schema = {
@@ -47,6 +48,7 @@ export function classifyOptions(repoRoot: string, budgetUsd: number): Options {
     effort: config.effort.classify,
     maxBudgetUsd: budgetUsd,
     outputFormat: { type: "json_schema", schema },
+    hooks: { PreToolUse: readHooks(repoRoot) },
   };
 }
 

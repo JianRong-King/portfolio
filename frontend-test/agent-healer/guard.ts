@@ -34,3 +34,10 @@ export function isEditAllowed(filePath: string, repoRoot: string): boolean {
   const rel = toRepoPath(filePath, repoRoot);
   return rel !== null && isEditableRepoPath(rel);
 }
+
+export function isReadAllowed(filePath: string, repoRoot: string): boolean {
+  const rel = toRepoPath(filePath, repoRoot);
+  if (rel === null) return false;
+  if ((config.readableFiles as readonly string[]).includes(rel)) return true;
+  return config.readableDirs.some((dir) => rel === dir.slice(0, -1) || rel.startsWith(dir));
+}

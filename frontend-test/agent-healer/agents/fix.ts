@@ -1,6 +1,6 @@
-import type { HookCallback, Options, PreToolUseHookInput } from "@anthropic-ai/claude-agent-sdk";
+import type { Options } from "@anthropic-ai/claude-agent-sdk";
 import { config, type Classification, type FailingTest } from "../config";
-import { isEditAllowed } from "../guard";
+import { editHooks } from "./hooks";
 import { blockedTools, editTools, runAgent } from "./run";
 
 const systemPrompt = `You update outdated Playwright end-to-end tests after an intentional change to a portfolio website.
@@ -11,21 +11,6 @@ Rules:
 - Keep the existing code style: no comments, small focused changes.
 - The site diff already shows what changed. Search only inside frontend-test/, make the smallest edit that fixes the listed tests, then stop. Do not re-read files to verify.
 You cannot run commands; the tests are rerun for you after you finish.`;
-
-function pathGuard(repoRoot: string): HookCallback {
-  return async (input) => {
-    const { tool_input } = input as PreToolUseHookInput;
-    const filePath = (tool_input as { file_path?: string }).file_path ?? "";
-    if (isEditAllowed(filePath, repoRoot)) return {};
-    return {
-      hookSpecificOutput: {
-        hookEventName: "PreToolUse",
-        permissionDecision: "deny",
-        permissionDecisionReason: `Edits are only allowed in ${config.editableDirs.join(", ")}`,
-      },
-    };
-  };
-}
 
 export function fixOptions(repoRoot: string, budgetUsd: number): Options {
   return {
@@ -40,7 +25,7 @@ export function fixOptions(repoRoot: string, budgetUsd: number): Options {
     maxTurns: config.maxTurns.fix,
     effort: config.effort.fix,
     maxBudgetUsd: budgetUsd,
-    hooks: { PreToolUse: [{ matcher: "Edit|Write", hooks: [pathGuard(repoRoot)] }] },
+    hooks: { PreToolUse: editHooks(repoRoot) },
   };
 }
 
