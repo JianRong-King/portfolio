@@ -47,4 +47,4 @@ Playwright e2e, desktop Chromium 1280x720 only. Config is `playwright.config.ts`
 
 ## SDLC docs
 
-Work is driven by `intent.md -> spec.md -> plan.md` (see `frontend-test/` for the existing chain). Feature work needs approved docs before code; record deviations in `plan.md`.
+Work is driven by `intent.md -> spec.md -> plan.md`, one folder per feature at `frontend-test/feat/<feature-slug>/` (this overrides the ai-sdlc default `docs/sdlc/`). Start a new feature by copying `frontend-test/feat/_template/`; `feat/initial-testcase/` is the completed reference. Requirement numbers (R<N>) continue across features so each maps to one `tests/r<NN>-*.spec.ts`. Feature work needs approved docs before code; record deviations in `plan.md`.

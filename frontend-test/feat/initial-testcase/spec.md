@@ -39,7 +39,7 @@ One spec file per requirement, named `r<NN>-<requirement>.spec.ts`.
 ```
 playwright.config.ts                  root config, testDir -> frontend-test/tests
 frontend-test/
-  intent.md  spec.md  plan.md         SDLC docs
+  feat/initial-testcase/              SDLC docs: intent.md, spec.md, plan.md
   fixtures/test.ts                    extends Playwright test: homePage fixture + third-party request blocking
   pages/HomePage.ts                   page object: section + element locators
   data/expected.ts                    hard-coded expected values (links, counts, labels)

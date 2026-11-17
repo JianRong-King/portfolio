@@ -11,7 +11,7 @@ The portfolio website has no automated frontend checks. Every change to content,
 ## Proposed outcome
 - Running one command confirms the site's main flow on desktop works: every section renders its content, scroll-triggered content appears, and contact links point to the right destinations.
 - The test code is clean and well separated, so a recruiter reading the repo sees a deliberate, professional structure.
-- The intent -> spec -> plan -> code chain is kept in `frontend-test/` as a study reference for how the steps are done.
+- The intent -> spec -> plan -> code chain is kept in `frontend-test/feat/<feature>/` as a study reference for how the steps are done.
 
 ## Scope
 In:
