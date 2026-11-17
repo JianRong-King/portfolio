@@ -3,8 +3,12 @@ export const config = {
   maxAttempts: 3,
   budgetUsd: 0.9,
   maxTurns: {
-    classify: 30,
-    fix: 40,
+    classify: 8,
+    fix: 15,
+  },
+  effort: {
+    classify: "medium",
+    fix: "low",
   },
   editableDirs: ["frontend-test/pages/", "frontend-test/data/", "frontend-test/tests/"],
   siteDirs: ["app/", "styles/", "public/"],

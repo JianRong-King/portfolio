@@ -29,7 +29,9 @@ export async function runAgent(label: string, prompt: string, options: Options):
     if (!result) throw error;
   }
   if (!result) throw new Error("Agent ended without a result message");
-  console.error(`[${label}] ${result.subtype}, ${result.num_turns} turns, $${result.total_cost_usd.toFixed(4)}`);
+  const cost = result.total_cost_usd.toFixed(4);
+  const tokens = result.usage.output_tokens;
+  console.error(`[${label}] ${result.subtype}, ${result.num_turns} turns, ${tokens} output tokens, $${cost}`);
   return { result, costUsd: result.total_cost_usd };
 }
 

@@ -38,6 +38,7 @@ export function fixOptions(repoRoot: string, budgetUsd: number): Options {
     permissionMode: "dontAsk",
     settingSources: ["project"],
     maxTurns: config.maxTurns.fix,
+    effort: config.effort.fix,
     maxBudgetUsd: budgetUsd,
     hooks: { PreToolUse: [{ matcher: "Edit|Write", hooks: [pathGuard(repoRoot)] }] },
   };

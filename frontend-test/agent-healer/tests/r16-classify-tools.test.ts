@@ -13,6 +13,7 @@ test("classify step only gets read-only tools", () => {
   assert.equal(options.permissionMode, "dontAsk");
   assert.equal(options.maxBudgetUsd, 0.5);
   assert.equal(options.outputFormat?.type, "json_schema");
+  assert.equal(options.effort, "medium");
 });
 
 test("fix step has no shell and a PreToolUse guard on edits", () => {
@@ -22,6 +23,7 @@ test("fix step has no shell and a PreToolUse guard on edits", () => {
   assert.ok(options.disallowedTools?.includes("Bash"));
   assert.equal(options.hooks?.PreToolUse?.[0]?.matcher, "Edit|Write");
   assert.equal(options.maxBudgetUsd, 0.4);
+  assert.equal(options.effort, "low");
 });
 
 test("failures without a verdict default to possible_regression", () => {

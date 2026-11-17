@@ -44,6 +44,7 @@ export function classifyOptions(repoRoot: string, budgetUsd: number): Options {
     permissionMode: "dontAsk",
     settingSources: ["project"],
     maxTurns: config.maxTurns.classify,
+    effort: config.effort.classify,
     maxBudgetUsd: budgetUsd,
     outputFormat: { type: "json_schema", schema },
   };
