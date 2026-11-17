@@ -14,6 +14,10 @@ npm run test:e2e:report     # open last HTML report
 npx playwright test r05     # run one requirement's spec by filename prefix
 npx playwright test r09 --repeat-each=5   # flakiness check
 npx tsc --noEmit            # type-check without building
+
+npm run test:healer         # healer unit tests (node:test via tsx), no API key needed
+npm run heal                # self-healing loop locally; needs a clean working tree and Anthropic auth
+HEALER_DEBUG=1 npm run heal # also log per-call token counts
 ```
 
 No linter is configured. First-time Playwright setup: `npx playwright install chromium`.
@@ -44,6 +48,15 @@ Playwright e2e, desktop Chromium 1280x720 only. Config is `playwright.config.ts`
 - All locators go through `pages/HomePage.ts`. Prefer role/text locators, then section ids; `data-testid` only as a last resort and the only allowed change to site code for testing.
 - Expected values are hard-coded in `data/expected.ts` and must be updated when `app/data/*` changes.
 - Never assert on real external sites; check link attributes or `blockedRequests` instead.
+
+## Self-healing loop (`frontend-test/agent-healer/`)
+
+CI runs `.github/workflows/test.yml` on every push/PR; when it fails, `heal.yml` (`workflow_run`, skips `main`, `heal/*` and forks) runs `npm run heal -- --ci`.
+
+- `orchestrator.ts` is plain code: run suite -> `agents/classify.ts` labels each failure `test_outdated` / `possible_regression` (read-only tools, JSON schema output) -> `agents/fix.ts` edits only outdated tests -> `postCheck.ts` rejects bad diffs -> rerun, max 3 attempts. Dependencies are injected so the loop is unit-tested with stubs.
+- Guardrails live in code, not prompts: `tools` list per agent (no Bash), `agents/hooks.ts` limits reads to `frontend-test/`, `app/`, `styles/` and edits to `frontend-test/{pages,data,tests}/`, `budget.ts` caps spend at $0.90 per run. All limits are in `config.ts`.
+- Model `claude-opus-4-6` by default, override with `HEALER_MODEL`. Each tool-using agent turn has a fixed ~113k cached-token overhead, so a heal costs roughly $0.15-0.55.
+- In `--ci` mode `github.ts` opens a PR from `heal/<branch>-<sha7>` into the failing branch and comments on regressions; locally it only edits the working tree.
 
 ## SDLC docs
 
